@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Alumnos | Premium Selection</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span><strong>Selección de alumnos</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="contenido">
+
+    <!-- Título + botón añadir -->
+    <section class="container top-bar">
+      <h1>Gestión de Alumnos</h1>
+      <button id="add-student-btn" class="btn-primary">+ Añadir alumno</button>
+    </section>
+
+    <!-- Dos columnas: disponibles | seleccionados -->
+    <section class="columns">
+
+      <div class="container column" id="available-section">
+        <div class="column-header">
+          <h2>Disponibles</h2>
+          <span class="badge" id="badge-available">0</span>
+        </div>
+        <div id="available-students" class="drop-zone">
+          <p class="empty-msg">Aún no hay alumnos.<br>Pulsa "Añadir alumno" para empezar.</p>
+        </div>
+      </div>
+
+      <div class="divider-arrow">▶</div>
+
+      <div class="container column" id="selected-section">
+        <div class="column-header">
+          <h2>Seleccionados</h2>
+          <span class="badge badge-accent" id="badge-selected">0</span>
+        </div>
+        <div id="selected-students" class="drop-zone">
+          <p class="empty-msg">Arrastra aquí a los alumnos<br>que quieras seleccionar.</p>
+        </div>
+        <button id="send-btn" class="btn-send" disabled>Enviar selección ↗</button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Desarrollado por AJCD | 2ºDAW</p>
+  </footer>
+
+  <!-- Modal añadir/editar -->
+  <div id="modal-overlay" class="modal-overlay hidden"></div>
+  <div id="student-modal" class="modal hidden">
+    <button class="modal-close" id="modal-close-x">✕</button>
+    <h3 id="modal-title">Nuevo alumno</h3>
+    <div class="modal-field">
+      <label for="input-name">Nombre completo</label>
+      <input id="input-name" type="text" placeholder="Ej: María García López" autocomplete="off">
+    </div>
+    <div class="modal-field">
+      <label for="input-course">Curso / Grupo</label>
+      <input id="input-course" type="text" placeholder="Ej: 2º Bachillerato A" autocomplete="off">
+    </div>
+    <div class="modal-actions">
+      <button id="modal-cancel" class="btn-ghost">Cancelar</button>
+      <button id="modal-save"   class="btn-primary">Guardar</button>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
