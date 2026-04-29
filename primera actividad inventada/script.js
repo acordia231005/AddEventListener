@@ -18,6 +18,7 @@ function añadirAlumno() {
   columna.insertBefore(tarjeta, boton);
 }
 
+//crear tarjeta de los alumnos
 function crearTarjeta(alumno) {
   let div = document.createElement("div");
   div.className = "alumno";
@@ -38,17 +39,21 @@ function crearTarjeta(alumno) {
 
 let columnas = document.querySelectorAll(".columna");
 
+//arrastrar alumnos
 columnas.forEach(function(columna) {
 
+  //arrastrar encima de una columna
   columna.addEventListener("dragover", function(e) {
     e.preventDefault();
     columna.classList.add("resaltada");
   });
 
+  //dejar de arrastrar encima de la columna
   columna.addEventListener("dragleave", function() {
     columna.classList.remove("resaltada");
   });
 
+  //sueltar el alumno en la columna
   columna.addEventListener("drop", function(e) {
     columna.classList.remove("resaltada");
     if (!idArrastrado) return;
@@ -62,6 +67,7 @@ columnas.forEach(function(columna) {
 
 });
 
+//enviar alumnos seleccionados
 function enviar() {
   let tarjetas = document.querySelectorAll("#seleccionados .alumno");
 
