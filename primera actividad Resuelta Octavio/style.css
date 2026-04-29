@@ -1,0 +1,64 @@
+header{
+    display: flex;
+    background-color: lightblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+header>img{
+    height: 50px;
+    padding: 10px;
+}
+
+footer{
+    text-align: center;
+    background-color: lightblue;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.alumnos{
+    display: flex;
+    gap: 12px;
+}
+
+.column{
+    flex: 1;
+    margin-top: 100px;
+    border: solid 2px black;
+}
+
+.btn{
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 12px;
+    font-size: 14px;
+    background-color: #4da6ff;
+    color: white;
+}
+
+.btn:hover{
+    background-color: #3399ff;
+}
+
+.lista{
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+}
+
+.alumno{
+    background-color: #e6f2ff;
+    border: 1px solid #4da6ff;
+    border-radius: 8px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+article>h2{
+    padding: 0px 5px;
+}
