@@ -164,4 +164,5 @@ function mostrarNotificacion(texto, color) {
         notif.style.transition = "all 0.3s ease";
         setTimeout(() => notif.remove(), 300);
     }, 3000);
+    
 }
